@@ -8,7 +8,8 @@ pipeline {
      
      SERVICE_NAME = "docker-java-helloworld-pipeline"
      IMAGE_NAME = "ci-pipeline-demo-${jenkins_username}"
-     REPOSITORY_TAG="${DOCKERHUB_URL}/${IMAGE_NAME}:${BUILD_ID}"
+     ORGANIZATION_NAME = "training"
+     REPOSITORY_TAG="${DOCKERHUB_URL}/${ORGANIZATION_NAME}/${IMAGE_NAME}:${BUILD_ID}"
    }
 
    stages {
